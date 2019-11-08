@@ -6,6 +6,7 @@
     <div class="bg-to-transp"></div>
     <div class="hp-content">
       <div class="cocktail-nav">
+      <% if @cocktails %>
         <h2>Popular Cocktails</h2>
         <div class="cocktail-nav-horiz">
           <% @cocktails.each do |cocktail| %>
@@ -18,8 +19,10 @@
             <% end %>
           <% end %>
         </div>
+      <% end %>
       </div>
       <div class="cocktail-nav">
+      <% if @cocktails %>
         <h2>Top Gin Cocktails</h2>
         <div class="cocktail-nav-horiz">
           <% @cocktails.each do |cocktail| %>
@@ -32,8 +35,10 @@
             <% end %>
           <% end %>
         </div>
+      <% end %>
       </div>
       <div class="cocktail-nav">
+      <% if @cocktails %>
         <h2>Top Vodka Cocktails</h2>
         <div class="cocktail-nav-horiz">
           <% @cocktails.each do |cocktail| %>
@@ -46,8 +51,10 @@
             <% end %>
           <% end %>
         </div>
+      <% end %>
       </div>
       <div class="cocktail-nav">
+      <% if @cocktails %>
         <h2>Top Whiskey Cocktails</h2>
         <div class="cocktail-nav-horiz">
           <% @cocktails.each do |cocktail| %>
@@ -60,6 +67,7 @@
             <% end %>
           <% end %>
         </div>
+      <% end %>
       </div>
     </div>
   </div>

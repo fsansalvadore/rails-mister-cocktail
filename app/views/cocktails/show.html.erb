@@ -3,8 +3,8 @@
     <%= cl_image_tag @cocktail.photo, height: 300, width: 300, crop: :fill, class: "cocktail-avatar" %>
     <h1 class="cocktail-title"><%= @cocktail.name %></h1>
     <hr>
-    <%= link_to "Edit", edit_cocktail_path(@cocktail), class: "btn" %>
-    <%= link_to "Delete", cocktail_path(@cocktail), class: "btn",
+    <%= link_to "Edit", edit_cocktail_path(@cocktail), class: "btn btn-warning" %>
+    <%= link_to "Delete", cocktail_path(@cocktail), class: "btn btn-danger",
       method: :delete,
       data: { confirm: "Sure you want to delete?" }
      %>
