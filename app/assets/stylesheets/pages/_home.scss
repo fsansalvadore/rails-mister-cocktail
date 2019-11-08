@@ -93,6 +93,7 @@ $main-banner-height: 60%;
   overflow-x: auto;
   white-space: nowrap;
   height: 300px;
+  padding-left: 15px;
   padding-top: 30px;
   margin-bottom: 40px;
 }
@@ -112,7 +113,7 @@ $main-banner-height: 60%;
 }
 
 .cocktail-card:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   z-index: 99;
 }
 

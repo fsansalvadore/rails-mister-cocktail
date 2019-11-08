@@ -1,6 +1,9 @@
 class CocktailsController < ApplicationController
   def index
     @cocktails = Cocktail.all
+    if Dose.all.count > 0
+      @doses = Dose.all
+    end
   end
 
   def show

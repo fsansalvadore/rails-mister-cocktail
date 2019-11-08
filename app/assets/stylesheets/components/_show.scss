@@ -62,3 +62,15 @@ h5 {
 .add-container .btn {
   margin-top: 40px;
 }
+
+.doses-container li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #555;
+}
+
+.doses-container li p {
+  width: 90%;
+  padding-top: 15px;
+}
