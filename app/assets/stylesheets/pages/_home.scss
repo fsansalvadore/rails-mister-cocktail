@@ -1,1 +1,133 @@
 // Specific CSS for your home-page
+$light-black: #080808;
+$soft-white: #f0f0f0;
+$main-banner-height: 60%;
+
+#hp-bg {
+  position: absolute;
+  top: 0;
+  z-index: -99;
+  left: 0;
+  right: 0;
+  width: 90%;
+  height: $main-banner-height;
+  background-image: image-url('bg.jpg');
+  background-position: 50% -200px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+
+.bg-to-transp {
+  position: absolute;
+  top: -200px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  z-index: -10;
+  background-image: linear-gradient(to top, $light-black 0%, rgba(0,0,0,0) 40%);
+}
+
+.content-container {
+  position: absolute;
+  background-color: $light-black;
+  width: 100%;
+  top: $main-banner-height;
+}
+
+.offset-content {
+  position: absolute;
+  padding-top: 300px;
+  top: -300px;
+  width: 100;
+  right: 0;
+  left: 0;
+}
+
+.hp-content {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+}
+
+#hp-h1 {
+  text-transform: uppercase;
+  line-height: 2.2rem;
+  position: absolute;
+  color: $soft-white;
+  top: 222px;
+  padding-left: 60%;
+  font-size: 2rem;
+  font-weight: 400;
+  width: 100%;
+}
+
+.h1-span-1 {
+  font-size: 60px;
+  font-weight: bold;
+  position: absolute;
+  margin: 12px 0 0 5px;
+  color: #e90913;
+}
+
+.h1-span-and {
+  font-size: 2rem;
+}
+
+.cocktail-nav {
+  padding-left: 30px;
+  position: relative;
+}
+
+.cocktail-nav h2 {
+  color: $soft-white;
+  font-size: 20px;
+  opacity: 0.7;
+  top: -20px;
+  position: absolute;
+  font-weight: bold;
+}
+
+.cocktail-nav-horiz {
+  overflow-x: auto;
+  white-space: nowrap;
+  height: 300px;
+  padding-top: 30px;
+  margin-bottom: 40px;
+}
+
+.cocktail-card {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 300px;
+  height: 200px;
+  padding: 2px;
+  color: white;
+  z-index: 0;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.cocktail-card:hover {
+  transform: scale(1.2);
+  z-index: 99;
+}
+
+.cocktail-card h3 {
+  position: absolute;
+  bottom: -30px;
+  left: 12px;
+  font-size: 20px;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.cocktail-card-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}

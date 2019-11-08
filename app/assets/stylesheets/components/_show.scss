@@ -1,0 +1,64 @@
+.show-container {
+  margin-top: 100px;
+  display: flex;
+}
+
+.show-left {
+  width: 70%;
+
+}
+
+.show-right {
+  flex-grow: 1;
+}
+
+.form-control, .form-control:active, .form-control:focus {
+  background-color: transparent;
+  color: #f0f0f0;
+}
+
+h5 {
+  color: #e90913;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.form-container .btn {
+  margin-top: 30px;
+}
+
+.cocktail-avatar {
+  border-radius: 20px;
+}
+
+.cocktail-title {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.show-hr {
+  border-bottom: 1px solid #f0f0f0;
+  color: #f0f0f0;
+  opacity: 0.5;
+}
+
+.add-container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+  height: 100%;
+  margin-top: 200px;
+}
+
+.add-container h1 {
+  color: #e90913;
+  font-weight: bold;
+  font-size: 38px;
+  margin-bottom: 50px;
+}
+
+.add-container .btn {
+  margin-top: 40px;
+}

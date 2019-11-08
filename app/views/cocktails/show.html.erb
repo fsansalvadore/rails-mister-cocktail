@@ -1,18 +1,26 @@
-<h1>Cocktail: <%= @cocktail.name %></h1>
-<ul>
-  <% @doses.each do |dose| %>
-  <li><p><%= dose.id %> | <%= dose.ingredient.name %> - <%= dose.description %></p> <%= link_to "Delete", dose_path(dose), class: "btn btn-danger btn-sx",
-  method: :delete,
-  data: { confirm: "Sure?" } %></li>
-  <% end %>
-</ul>
-<hr>
-<%= link_to "Edit", edit_cocktail_path(@cocktail), class: "btn btn-primary" %>
-<%= link_to "Delete", cocktail_path(@cocktail), class: "btn btn-danger",
-  method: :delete,
-  data: { confirm: "Sure you want to delete?" }
- %>
-
-<hr>
-<h5>Add a dose</h5>
-<%= render './doses/new' %>
+<div class="show-container container">
+  <div class="show-right">
+    <%= cl_image_tag @cocktail.photo, height: 300, width: 300, crop: :fill, class: "cocktail-avatar" %>
+    <h1 class="cocktail-title"><%= @cocktail.name %></h1>
+    <hr>
+    <%= link_to "Edit", edit_cocktail_path(@cocktail), class: "btn" %>
+    <%= link_to "Delete", cocktail_path(@cocktail), class: "btn",
+      method: :delete,
+      data: { confirm: "Sure you want to delete?" }
+     %>
+  </div>
+  <div class="show-right form-container">
+    <h5>Add a dose</h5>
+    <%= render './doses/new' %>
+  </div>
+</div>
+<div class="container">
+  <hr class="show-hr">
+  <ul>
+    <% @doses.each do |dose| %>
+    <li><p><%= dose.id %> | <%= dose.ingredient.name %> - <%= dose.description %></p> <%= link_to "Delete", dose_path(dose), class: "btn btn-danger btn-sx",
+    method: :delete,
+    data: { confirm: "Sure?" } %></li>
+    <% end %>
+  </ul>
+</div>

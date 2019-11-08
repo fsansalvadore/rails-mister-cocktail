@@ -1,0 +1,6 @@
+<nav class="navbar navbar-light fixed-top">
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "cocktails_logo.png", alt: "cocktails", id: "logo" %>
+  <% end %>
+  <%= link_to "Add Drink", new_cocktail_path ,class: "btn btn-danger add-cta" %>
+</nav>

@@ -1,5 +1,9 @@
-<h1>Add a cocktail!</h1>
-<%= simple_form_for (@cocktail) do |f| %>
-<%= f.input :name %>
-<%= f.submit %>
-<% end %>
+<div class="container add-container">
+  <h1>Add a cocktail!</h1>
+  <%= simple_form_for (@cocktail) do |f| %>
+    <%= f.input :name, placeholder: "Name" %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.submit class: "btn btn-danger col-12" %>
+  <% end %>
+</div>

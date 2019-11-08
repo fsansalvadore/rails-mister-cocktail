@@ -1,7 +1,66 @@
-<h1>Cocktails</h1>
+<div id="hp-bg" class="parallax"></div>
+<h1 id="hp-h1">Sit back<br>and <span class="h1-span-1">Drink<span class="h1-span-1"></h1>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-  <% end %>
-</ul>
+<main class="content-container">
+  <div class="offset-content">
+    <div class="bg-to-transp"></div>
+    <div class="hp-content">
+      <div class="cocktail-nav">
+        <h2>Popular Cocktails</h2>
+        <div class="cocktail-nav-horiz">
+          <% @cocktails.each do |cocktail| %>
+            <% 6.times do %>
+              <%= link_to cocktail_path(cocktail), class: "cocktail-card" do %>
+                <h3><%= cocktail.name %></h3>
+                <div class="cocktail-card-img" style="background-image: url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+                </div>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="cocktail-nav">
+        <h2>Top Gin Cocktails</h2>
+        <div class="cocktail-nav-horiz">
+          <% @cocktails.each do |cocktail| %>
+            <% 6.times do %>
+              <%= link_to cocktail_path(cocktail), class: "cocktail-card" do %>
+                <h3><%= cocktail.name %></h3>
+                <div class="cocktail-card-img" style="background-image: url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+                </div>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="cocktail-nav">
+        <h2>Top Vodka Cocktails</h2>
+        <div class="cocktail-nav-horiz">
+          <% @cocktails.each do |cocktail| %>
+            <% 6.times do %>
+              <%= link_to cocktail_path(cocktail), class: "cocktail-card" do %>
+                <h3><%= cocktail.name %></h3>
+                <div class="cocktail-card-img" style="background-image: url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+                </div>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="cocktail-nav">
+        <h2>Top Whiskey Cocktails</h2>
+        <div class="cocktail-nav-horiz">
+          <% @cocktails.each do |cocktail| %>
+            <% 6.times do %>
+              <%= link_to cocktail_path(cocktail), class: "cocktail-card" do %>
+                <h3><%= cocktail.name %></h3>
+                <div class="cocktail-card-img" style="background-image: url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+                </div>
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
