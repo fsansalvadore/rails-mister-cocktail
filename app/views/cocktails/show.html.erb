@@ -1,5 +1,4 @@
 <h1>Cocktail: <%= @cocktail.name %></h1>
-<%= link_to "Add Dose", new_cocktail_dose_path(@cocktail), class: "btn btn-success" %>
 <ul>
   <% @doses.each do |dose| %>
   <li><p><%= dose.id %> | <%= dose.ingredient.name %> - <%= dose.description %></p> <%= link_to "Delete", dose_path(dose), class: "btn btn-danger btn-sx",
@@ -13,3 +12,7 @@
   method: :delete,
   data: { confirm: "Sure you want to delete?" }
  %>
+
+<hr>
+<h5>Add a dose</h5>
+<%= render './doses/new' %>
