@@ -19,11 +19,11 @@
         </div>
       <% end %>
       </div>
-      <% if @cocktails.all.select { |c| c.doses.any? { |d| d.ingredient.name = "gin" } }.any? %>
+      <% if @cocktails.joins(:ingredients).where(ingredients: {name: "Gin"}).any? %>
       <div class="cocktail-nav">
         <h2>Top Gin Cocktails</h2>
         <div class="cocktail-nav-horiz">
-          <% @cocktails.all.select { |c| c.doses.any? { |d| d.ingredient.name = "gin" } }.each do |cocktail| %>
+          <% @cocktails.joins(:ingredients).where(ingredients: {name: "Gin"}).each do |cocktail| %>
             <%= link_to cocktail_path(cocktail), class: "cocktail-card" do %>
               <h3><%= cocktail.name %></h3>
               <div class="cocktail-card-img" style="background-image: url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>');">
@@ -33,11 +33,11 @@
       <% end %>
         </div>
       </div>
-      <% if @cocktails.all.select { |c| c.doses.any? { |d| d.ingredient.name = "vodka" } }.any? %>
+      <% if @cocktails.joins(:ingredients).where(ingredients: {name: "Vodka"}).any? %>
       <div class="cocktail-nav">
         <h2>Top Vodka Cocktails</h2>
         <div class="cocktail-nav-horiz">
-          <% @cocktails.all.select { |c| c.doses.any? { |d| d.ingredient.name = "vodka" } }.each do |cocktail| %>
+          <% @cocktails.joins(:ingredients).where(ingredients: {name: "Vodka"}).each do |cocktail| %>
             <%= link_to cocktail_path(cocktail), class: "cocktail-card" do %>
               <h3><%= cocktail.name %></h3>
               <div class="cocktail-card-img" style="background-image: url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>');">
@@ -47,11 +47,11 @@
         </div>
       </div>
       <% end %>
-      <% if @cocktails.all.select { |c| c.doses.any? { |d| d.ingredient.name = "whiskey" } }.any? %>
+      <% if @cocktails.joins(:ingredients).where(ingredients: {name: "Whiskey"}).any? %>
       <div class="cocktail-nav">
         <h2>Top Whiskey Cocktails</h2>
         <div class="cocktail-nav-horiz">
-          <% @cocktails.all.select { |c| c.doses.any? { |d| d.ingredient.name = "whiskey" } }.each do |cocktail| %>
+          <% @cocktails.joins(:ingredients).where(ingredients: {name: "Whiskey"}).each do |cocktail| %>
             <%= link_to cocktail_path(cocktail), class: "cocktail-card" do %>
               <h3><%= cocktail.name %></h3>
               <div class="cocktail-card-img" style="background-image: url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>');">
